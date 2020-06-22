@@ -1,19 +1,21 @@
 package com.renuka.springbootfirst.model;
 
+import java.util.UUID;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PersonModel {
 
-	private final int id;
+	private final UUID id;
 	private final String name;
 	
-	public PersonModel(@JsonProperty("id")int id,
+	public PersonModel(@JsonProperty("id")UUID id,
 						@JsonProperty("name") String name) {
 		 this.id=id;
 		 this.name = name;
 	}
 
-	public int getId() {
+	public UUID getId() {
 		return id;
 	}
 
